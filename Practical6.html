@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-6</title>
+    <style>
+        body{
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        *{padding: 0;margin: 0;box-sizing: border-box;}
+        #container
+        { 
+            display: inline-flex; 
+        }
+        .box
+        {
+            width: 350px;
+            height: 450px; 
+            overflow: hidden;
+            text-align: justify;
+            padding: 20px;
+            background-color: white;
+            border-radius: 20px;
+            margin: 15px 15px;
+            margin-top: 50px;
+        }
+        .box img
+        {
+          width: 100%;
+          height: 170px;
+          border-radius: 20px;
+        }
+        .box h2
+        {
+            text-align: center;
+            margin: 10px;
+        }
+        .mybutton
+        {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: white;
+            font-family: Arial;
+            background-color: red;
+            padding:  10px 20px;
+            border-radius: 20px;
+        }
+        .mybutton:hover
+        {
+         background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: white;font-size: 38px; text-align: center; margin-top: 20px;">PRACTICAL-6: CREATE FOLLOWING LAYOUTS USING CSS LAYOUT PROPERTIES.
+    </h1>
+</body>
+<body>
+    <div id="container">
+    <div class="box" id="box1">
+        <div class="image-heading">
+            <img src="./html.png" alt=""/>
+        </div>
+        
+    <h2 style="font-size: 20px;">Introduction to HTML</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, magni.  orem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, vitae.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti quaerat tempora maxime aut magnam dicta quia eum. Quos vero s Eius tempora qui consectetur et, 
+    </p>
+    <div class="image" style="text-align: center;">
+    <a href="./Page1.html" class="mybutton"> Read More
+    </a>
+</div>
+</div>
+<div class="box" id="box2">
+    <div class="image-heading">
+        <img src="css.png" alt=""/>
+    </div>
+    <h2 style="font-size: 20px;">Introduction to CSS</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, minus?  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, corporis!    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto cumque alias totam sit voluptatibus expedita animi? Eius tempora qui consectetur et, 
+    </p>
+    <div class="image" style="text-align: center;">
+        <a href="./Page2.html" class="mybutton"> Read More
+        </a>
+    </div>
+</div>
+<div class="box" id="box3">
+    <div class="image-heading">
+        <img src="./jquery.png" alt=""/>
+    </div>
+    <h2 style="font-size: 20px;">Introduction to JavaScript</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus, veniam!  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, nulla!   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto cumque alias totam sit voluptatibus expedita animi? Eius tempora qui consectetur et, 
+    </p>
+    <div class="image" style="text-align: center;">
+        <a href="./Page3.html" class="mybutton"> Read More
+        </a>
+    </div>
+</div>
+<div class="box" id="box4">
+    <div class="image-heading">
+        <img src="./bootstrap.jpg" alt=""/>
+    </div>
+    <h2 style="font-size: 20px;">Introduction to Bootstrap</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, aliquid!   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, animi?   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto cumque alias totam sit voluptatibus expedita animi? Eius tempora qui consectetur et, 
+    </p>
+    <div class="image" style="text-align: center;">
+        <a href="./Page4.html" class="mybutton"> Read More
+        </a>
+    </div>
+</div>
+</div>
+</body>
+</html>
