@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practical-9</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .menu {
+            list-style: none;
+            float: right;
+            padding: 0 20px;
+        }
+
+        .menu li {
+            line-height: 70px;
+            display: inline-block;
+        }
+
+        .menu li a {
+            transition: 0.4s;
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 0px 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .menu li a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        html {
+            scroll-padding-top: 70px;
+            scroll-behavior: smooth;
+
+        }
+
+        #container {
+            width: 100%;
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        .show-btn,
+        .hide-btn,
+        #chk {
+            font-size: 30px;
+            line-height: 70px;
+            color: white;
+            display: none;
+            float: right;
+            padding-right: 20px;
+        }
+
+        #head {
+            width: 100%;
+            max-width: 1200px;
+            background-color:darkslategray;
+            height: 70px;
+            top: 0;
+            position: fixed;
+
+        }
+
+        #ban {
+            width: 100%;
+            height: 680px;
+            margin-top: 90px;
+            margin-bottom: 15px;
+            font-size: 40px;
+            display: flex;
+            color: white;
+        }
+        #ban {
+            background-image: url(./img2.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #ban h2 {
+            margin: 20px 20px;
+            color: #fff;
+        }
+
+        #Section1 {
+            width: 100%;
+            margin: 15px auto;
+        }
+
+        #Section1::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .circle img {
+            background-color: rgb(238, 146, 9);
+            border-radius: 50%;
+            height: 250px;
+            width: 250px;
+            display: flex;
+            float: left;
+            margin-left: 40px ;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        #Section2::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        #main {
+            background-color:maroon;
+            height: 550px;
+            width: 50%;
+            margin-bottom: 10px;
+            float: left;
+            color: white;
+        }
+
+        #main-p>h2 {
+            text-align: left;
+            margin: 10px 5px;
+        }
+
+        #main-p>p {
+            font-size: 20px;
+            padding: 10px;
+            text-align: justify;
+            line-height: 28px;
+        }
+
+        #Article {
+
+            width: 48%;
+            height: 550px;
+            float: right;
+        }
+
+        .art {
+            background-color: rgb(196, 74, 26);
+            justify-content: center;
+            display: flex;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 31%;
+            color: black;
+            overflow: hidden;
+        }
+
+        #p1 {
+            background-image: url(./p8.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #p2 {
+            background-image: url(./p11.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #p3 {
+            background-image: url(./p10.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #Section3 {
+            width: 100%;
+            margin: 15px auto;
+        }
+
+        #Section3::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .rec {
+            width: 20%;
+            float: left;
+            margin-left: 50px;
+            background-color:lightskyblue;
+            border-radius: 8px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        .rec>img {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .rec>h4 {
+            margin: 0px 10px;
+            text-align: center;
+        }
+
+        .rec>p {
+            margin: 10px;
+            font-size: 15px;
+            text-align: justify;
+            line-height: 25px;
+            color: white;
+        }
+
+        .rec>a {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            background-color: red;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: black;
+            font-size: 40px;
+            text-align: center;
+            padding: 25px 0px;
+        }
+
+        .rec>a:hover {
+            background-color: blue;
+        }
+
+        #foot {
+            background-color: rgb(211, 102, 169);
+            height: 100px;
+        }
+
+        #foot>p {
+            font-size: 16px;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (min-width:801px) and (max-width:1199px) {
+            .menu {
+                list-style: none;
+                float: right;
+            }
+
+            .menu li {
+                line-height: 70px;
+                display: inline-block;
+            }
+
+            .menu li a {
+                display: block;
+                text-decoration: none;
+                color: white;
+                padding: 0px 20px;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+
+            .menu li a:hover {
+                color: black;
+                background-color: white;
+            }
+
+            html {
+                scroll-padding-top: 70px;
+                scroll-behavior: smooth;
+
+            }
+            
+        #p1 {
+            background-image: url(./p8.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #p2 {
+            background-image: url(./p11.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #p3 {
+            background-image: url(./p10.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+            #container {
+                width: 100%;
+            }
+
+            .show-btn,
+            .hide-btn,
+            #chk {
+                font-size: 30px;
+                line-height: 70px;
+                color: white;
+                display: none;
+                float: right;
+                padding-right: 20px;
+            }
+
+            #head {
+                width: 100%;
+                background-color: darkslategray;
+                height: 70px;
+                top: 0;
+                position: fixed;
+
+            }
+
+            #ban {
+                width: 100%;
+                height: 680px;
+                margin-top: 90px;
+                margin-bottom: 15px;
+                font-size: 40px;
+                display: flex;
+                color: white;
+               
+            }
+
+            #ban {
+                background-image: url(./img2.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            #ban h2 {
+                margin: 20px 20px;
+                color: #fff;
+            }
+
+            #Section1 {
+                width: 100%;
+            }
+
+            #Section1::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .circle img {
+                background-color: rgb(238, 146, 9);
+                border-radius: 50%;
+                height: 250px;
+                width: 250px;
+                margin-bottom: 20px;
+                float: left;
+                margin-left: 15%;
+            }
+
+            #Section2::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            #main {
+                background-color: gray;
+                height: 550px;
+                width: 50%;
+                margin-bottom: 10px;
+                float: left;
+                color: white;
+            }
+
+            #main-p>h2 {
+                text-align: left;
+                margin: 10px 5px;
+            }
+
+            #main-p>p {
+                font-size: 20px;
+                padding: 10px;
+                text-align: justify;
+                line-height: 28px;
+            }
+
+            #Article {
+
+                width: 48%;
+                height: 550px;
+                float: right;
+            }
+
+            .art {
+                background-color: rgb(196, 74, 26);
+                justify-content: center;
+                display: flex;
+                margin-bottom: 20px;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                height: 31%;
+                color: black;
+                overflow: hidden;
+            }
+            #Section3 {
+                width: 100%;
+                margin: 15px auto;
+            }
+
+            #Section3::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .rec {
+                width: 40%;
+                float: left;
+                margin-left: 65px;
+                margin-bottom: 20px;
+                background-color: lightskyblue;
+                border-radius: 8px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            }
+
+            .rec>img {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 20px;
+            }
+
+            .rec>h4 {
+                margin: 0px 10px;
+                text-align: center;
+            }
+
+            .rec>p {
+                margin: 10px;
+                font-size: 20px;
+                text-align: justify;
+                line-height: 30px;
+                color: white;
+            }
+
+            .rec>a {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                color: #fff;
+                background-color: red;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                color: black;
+                font-size: 40px;
+                text-align: center;
+                padding: 25px 0px;
+            }
+
+            .rec>a:hover {
+                background-color: blue;
+            }
+
+            #foot {
+                background-color:hotpink;
+                height: 100px;
+            }
+
+            #foot>p {
+                font-size: 16px;
+                color: black;
+                text-align: center;
+                padding: 20px;
+            }
+        }
+        @media (max-width: 800px) {
+            .menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                padding: 80px 0px;
+                line-height: normal;
+                transition: 0.7s;
+            }
+
+            .menu li {
+                display: block;
+            }
+
+            .menu li a {
+                display: block;
+            }
+
+            .show-btn {
+                display: block;
+            }
+
+            #chk:checked~.menu {
+                right: 0;
+            }
+
+            .hide-btn {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+
+            #head {
+                width: 100%;
+                background-color: darkslategray;
+                height: 70px;
+                top: 0;
+                position: fixed;
+
+            }
+
+            #ban {
+                width: 100%;
+                height: 350px;
+                margin-top: 90px;
+                margin-bottom: 15px;
+                font-size: 30px;
+                display: flex;
+                color: white;
+            }
+
+            #ban h2 {
+                margin: 10px 20px;
+                color: #fff;
+               
+            }
+            
+        #p1 {
+            background-image: url(./p8.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #p2 {
+            background-image: url(./p11.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #p3 {
+            background-image: url(./p10.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+            #Section1 {
+                width: 100%;
+            }
+
+            #Section1::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .circle img {
+                border-radius: 50%;
+                height: 250px;
+                width: 250px;
+                margin-bottom: 20px;
+                float: left;
+                margin-left: 10%;
+            }
+
+            #main {
+                background-color: maroon;
+                height: 200px;
+                width: 100%;
+                margin-bottom: 20px;
+                color: white;
+            }
+
+            #main-p>h2 {
+                text-align: left;
+                margin: 5px 5px;
+            }
+
+            #main-p>p {
+                font-size: 20px;
+                padding: 10px;
+                text-align: justify;
+                line-height: 28px;
+            }
+
+            #Article {
+
+                width: 100%;
+                height: 400px;
+            }
+
+            .art {
+                background-color: rgb(196, 74, 26);
+                justify-content: center;
+                display: flex;
+                margin-bottom: 20px;
+                font-size: 16px;
+                font-family: Arial, Helvetica, sans-serif;
+                height: 31%;
+                color: black;
+                overflow: hidden;
+            }
+            #Section3 {
+                width: 100%;
+                margin: 15px auto;
+            }
+
+            #Section3::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .rec {
+                width: 40%;
+                float: left;
+                margin-left: 50px;
+                margin-bottom: 20px;
+                background-color: lightskyblue;
+                border-radius: 8px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            }
+
+            .rec>img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .rec>h4 {
+                margin: 0px 10px;
+                text-align: center;
+            }
+
+            .rec>p {
+                margin: 10px;
+                font-size: 15px;
+                text-align: justify;
+                line-height: 25px;
+                color: white;
+            }
+
+            .rec>a {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                color: #fff;
+                background-color: red;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                color: black;
+                font-size: 40px;
+                text-align: center;
+                padding: 25px 0px;
+            }
+
+            @media (max-width: 625px) {
+                .menu {
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    width: 100%;
+                    background-color: #333;
+                    text-align: center;
+                    padding: 80px 0px;
+                    line-height: normal;
+                    transition: 0.7s;
+                }
+
+                .menu li {
+                    display: block;
+                }
+
+                .menu li a {
+                    display: block;
+                }
+
+                .menu li a:hover {
+                    color: black;
+                    background-color: white;
+                }
+
+                #container {
+                    min-width: 320px;
+                }
+
+                .show-btn {
+                    display: block;
+                }
+
+                .hide-btn {
+                    display: block;
+                    position: absolute;
+                    right: 20px;
+                    top: 10px;
+                }
+
+                #chk:checked~.menu {
+                    right: 0;
+                }
+
+                #ban {
+                    width: 100%;
+                    height: 250px;
+                    margin-top: 90px;
+                    margin-bottom: 15px;
+                    color: white;
+                    background-repeat: no-repeat;
+                }
+
+                #ban h2 {
+                    margin: 10px 20px;
+                    color: #fff;
+                    font-size: 20px;
+                    background-repeat: no-repeat;
+                }
+
+                #Section1 {
+                    width: 90%;
+                    margin-left: 10%;
+                }
+                
+        #p1 {
+            background-image: url(./p8.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #p2 {
+            background-image: url(./p11.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #p3 {
+            background-image: url(./p10.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+                .circle img {
+                    border-radius: 50%;
+                    height: 70%;
+                    width: 70%;
+                    margin-bottom: 20px;
+                }
+
+                #main {
+                    background-color: maroon;
+                    height: 200px;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    color: white;
+                }
+
+                #main-p>h2 {
+                    text-align: left;
+                    margin: 5px 5px;
+                }
+
+                #main-p>p {
+                    font-size: 20px;
+                    padding: 10px;
+                    text-align: justify;
+                    line-height: 28px;
+                }
+
+                #Article {
+
+                    width: 100%;
+                    height: 400px;
+                }
+
+                .art {
+                    box-sizing: border-box;
+                    justify-content: center;
+                    display: flex;
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    height: 31%;
+                    color: black;
+                    overflow: hidden;
+                }
+
+                #Section3 {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                .rec {
+                    width: 90%;
+                    float: left;
+                    margin-left: 20px;
+                    margin-bottom: 20px;
+                    background-color:lightskyblue ;
+                    border-radius: 8px;
+                    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+                    max-height: 500px;
+                }
+
+                .rec>img {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding: 20px;
+                }
+
+                .rec>h4 {
+                    margin: 0px 10px;
+                    text-align: center;
+                }
+
+                .rec>p {
+                    margin: 10px;
+                    font-size: 15px;
+                    text-align: justify;
+                    line-height: 25px;
+                    color: white;
+                }
+
+                .rec>a {
+                    display: block;
+                    margin: 0 auto;
+                    text-align: center;
+                    color: #fff;
+                    background-color: red;
+                    text-decoration: none;
+                    padding: 10px;
+                    border-radius: 8px;
+                }
+
+                h1 {
+                    color: black;
+                    font-size: 20px;
+                    text-align: center;
+                    padding-top: 25px;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="head">
+            <input type="checkbox" id="chk" />
+            <label for="chk" class="show-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <ul class="menu">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Section1">Team</a></li>
+                <li><a href="#Technologies">Technologies</a></li>
+                <li><a href="#contact">contact</a></li>
+
+                <label for="chk" class="hide-btn">
+                    <i class="fa fa-times"></i>
+                </label>
+            </ul>
+        </div>
+        <a name="top"></a>
+        <div id="ban">
+            <h2>PRACTICAL - 9</h2>
+        </div>
+
+        <div id="Section1">
+            <h1>Team Members</h1>
+            <div class="circle">
+                <img src="./p1.jpg" alt="" />
+            </div>
+            <div class="circle">
+                <img src="p2.jpg" alt="" />
+            </div>
+            <div class="circle">
+                <img src="p3.jpg" alt="" />
+            </div>
+            <div class="circle">
+                <img src="p4.jpg" alt="" />
+            </div>
+        </div>
+        <div id="Section2">
+            <a name="about"></a>
+            <h1>About Us</h1>
+            <div id="main">
+                <div id="main-p">
+                    <h2>About Projects</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, quasi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio sapiente quos facilis ad quo repellat necessitatibus! Mollitia dolorum recusandae commodi porro quis quibusdam non unde voluptatum, blanditiis reprehenderit est inventore autem in cupiditate ratione delectus molestias pariatur quaerat veritatis quo sunt harum laboriosam doloribus. Doloribus facere atque nihil est labore velit, nulla ad perferendis minima expedita, nam, quibusdam iure veniam placeat amet. Illo labore officia minima, error cum possimus laudantium reprehenderit exercitationem ut quis vitae quia culpa iure esse accusamus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Explicabo veniam, at, maiores unde quam doloremque
+                        molestias sint mollitia dolor, asperiores corrupti
+                        nobis exercitationem quas? Fuga consequuntur nemo adipisci
+                        voluptas sit vel, temporibus voluptatibus eum alias
+                        eveniet beatae excepturi inventore consectetur asperiores
+                        a nesciunt rem aliquid quam quas vitae voluptatem cum,
+                        
+                    </p>
+                </div>
+            </div>
+            <div id="Article">
+                <div class="art" id="p1">
+                    <h2>Project-1</h2>
+                </div>
+                <div class="art" id="p2">
+                    <h2>Project-2</h2>
+                </div>
+                <div class="art" id="p3">
+                    <h2>Project-3</h2>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="Section3">
+            <a name="Technologies"></a>
+            <h1>Technologies Used</h1>
+            <div class="rec">
+                <img src="./html.png" alt="" />
+                <h4>Introduction to HTML</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
+                    illum odio! Aperiam esse quia blanditiis quasi? Cum itaque
+                    recusandae consequuntur!
+                </p>
+
+                <a href="Page1.html">Read More</a>
+            </div>
+            <div class="rec">
+                <img src="./css.png" alt="" />
+                <h4>Introduction to CSS</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
+                    illum odio! Aperiam esse quia blanditiis quasi? Cum itaque
+                    recusandae consequuntur!
+                </p>
+
+                <a href="Page2.html">Read More</a>
+            </div>
+            <div class="rec">
+
+                <img src="./jquery.png" alt="" />
+                <h4>Introduction to JavaScript</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
+                    illum odio! Aperiam esse quia blanditiis quasi? Cum itaque
+                    recusandae consequuntur!
+                </p>
+
+                <a href="Page3.html">Read More</a>
+            </div>
+            <div class="rec">
+                <img src="./bootstrap.jpg" alt="" />
+                <h4>Introduction to Bootstrap</h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
+                    illum odio! Aperiam esse quia blanditiis quasi? Cum itaque
+                    recusandae consequuntur!
+                </p>
+
+                <a href="Page4.html">Read More</a>
+            </div>
+        </div>
+        <a name="contact"></a>
+        <h1>Contact</h1>
+        <div id="foot">
+            <p>
+                Website Template for Practical-8 &copy;
+                <a href="https://prachi2501.github.io/FullStackPracticals">Practicals</a><br /><br />
+                <a href="#top">Back to top</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

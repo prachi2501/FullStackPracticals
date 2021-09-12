@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pracical-9</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{padding: 0;margin: 0;box-sizing: border-box;}
+       
+        .header
+        {
+            width: 100%;
+            height: 70px;
+            background-color:darkslategrey;
+            padding: 0px 20px;
+        }
+        .header .menu
+        {
+            list-style: none;
+            float:right;
+        }
+        .menu li
+        {
+         display: inline-block;
+         line-height: 70px;
+        }
+        .menu li a
+        {
+          text-decoration: none;
+          font-family: arial;
+          color: white;
+          padding: 0px 20px;
+        }
+        .menu li a:hover,
+        .show-btn:hover, .hide-btn:hover
+        {
+            color: skyblue;
+        }
+        .show-btn, .hide-btn
+        {
+            font-size: 30px;
+            color: white;
+            line-height: 70px;
+            transition: .4s;
+            display: none;
+        }
+          
+        .show-btn
+        {
+            float: right;
+        }
+        #chk
+        {
+            position: absolute;
+            visibility: hidden;
+            z-index: -10;
+        }
+        @media(max-width: 800px)
+        {
+            .show-btn, .hide-btn
+            {
+                display: block;
+            }
+        .menu
+        {
+            position: fixed;
+            top:0;
+            /*slider effect */
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background-color: black;
+            padding: 80px 0;
+            transition: .7s;
+            line-height: normal;
+        }
+        #chk:checked ~ .menu
+        {
+            right: 0;
+        }
+        .menu li
+        {
+            display: block;
+            padding: 20px 0;
+        }
+        .menu li a
+        {
+            display: block;
+        }
+        .hide-btn
+        {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+    }
+    .banner
+        {
+           padding: 20px;
+           width: 100%;
+           height: 700px;
+        }
+        .banner img
+        {
+           width: 100%;
+           height: 700px;
+          
+        }
+        .text
+     {
+         color:white;
+         position: absolute;
+         font-size: 30px;
+         font-family: arial;
+         margin: 0 10px;
+     }
+        .circle
+        {
+          float: left;
+          width: 330px;
+          height: 330px;
+          border-radius: 50%;
+          margin:40px 20px;
+        }
+        .circle img
+        {
+          width: 330px;
+          height: 330px;
+        }
+        .left
+        {
+            width:50%;
+            height: 545px;
+            background-color:maroon;
+            margin:22px 30px;
+            float:right;
+        }
+        .right
+        {
+            width:45%;
+            height:100%;
+            float:right;
+        }
+        .artical
+        {
+            width: 540px;
+            height: 165px;
+            margin: 20px 20px;
+        }
+        .artical img
+        {
+            width: 540px;
+            height: 165px;
+        }
+        .text1
+     {
+         color:white;
+         position: absolute;
+         font-family: arial;
+         text-align: center;
+         margin:-40px 240px;
+     }
+     .box
+        {
+        width: 340px;
+        height: 450px; 
+        overflow: hidden;
+        text-align: justify;
+        padding: 15px;
+        background-color:seagreen;
+        margin: 15px 15px;
+        margin-top: 20px;
+        float: left;
+        }
+        .box img
+        {
+         width: 100%;
+          height: 170px;
+         border-radius: 20px;
+        }
+    .box h2
+    {
+        text-align: center;
+        margin: 10px;
+    }
+    .mybutton
+    {
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: white;
+        font-family: Arial;
+        background-color: red;
+        padding:  10px 20px;
+        border-radius: 20px;
+    }
+    .mybutton:hover
+    {
+     background-color: blue;
+    }
+    .footer
+        {
+            width: 100%;
+            height: 80px;
+            background-color:hotpink;
+            margin:auto;
+            text-align: center;
+            margin-bottom:20px;
+        }
+        .footer ol li a
+        {
+          text-decoration:underline;
+          font-family: arial;
+          line-height: 40px;
+        }
+    
+</style>
+</head>
+<body>
+    </style>
+</head>
+<body>
+    <div class="header">
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-btn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul class="menu">
+            <li><a href="#HOME">HOME</a></li>
+            <li><a href="#content">ABOUT US</a></li>
+            <li><a href="#Team Members">TEAM</a></li>
+            <li><a href="#box1">TECHNOLOGIES</a></li>
+            <li><a href="#Contact">CONTACT</a></li>
+        <label for="chk" class="hide-btn">
+                <i class="fa fa-times"></i>
+        </label>
+        </ul>
+    </div>
+
+    <div class="banner" ,id="HOME">
+            <img src="img2.jpg" alt="" style="width: 100%;">
+</div>
+
+<h1 style="color:black;font-size: 40px; text-align:center; padding: 60px 0px;">Team Members</h1>
+    <div class="circle" id="Team Members">
+         <img src="p2.jpg" alt=""/>
+    </div>
+    <div class="circle">
+         <img src="p3.jpg" alt=""/>
+     </div>
+    <div class="circle">
+         <img src="p4.jpg" alt=""/>
+     </div>
+    <div class="circle">
+         <img src="p1.jpg" alt=""/>
+</div>
+
+<h1 style="color:black;font-size: 38px; text-align:center;">About Us</h1>
+ <div class="left" id="content" style="color:white;font-size: 20px;"><h4 style="font-size: 40px;text-align: left;margin: 10px 15px;">About Projects</h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, praesentium?   Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dolorem possimus consequatur eius praesentium corporis adipisci iusto aspernatur quidem fugit!   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, voluptatum.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut ut dolore repellat aperiam amet mollitia rerum. Aspernatur ullam molestiae accusamus. Consequatur asperiores quaerat iusto dolorum enim facere fugit assumenda corporis similique veniam odio, aspernatur atque ipsum nihil aliquid veritatis cupiditate. Aliquid iste delectus porro eos. Magnam, in eaque? Sequi iste officiis deleniti distinctio quia, molestias amet alias esse aspernatur suscipit quo repellendus accusantium nihil. Repellat atque sint voluptates. Molestiae.   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos saepe porro optio dolor ratione quo pariatur a veritatis quidem fugiat officia consectetur, accusantium vero tempora at necessitatibus dolorem reiciendis. Nisi atque porro, quod nesciunt in aspernatur recusandae laudantium laboriosam repellendus?  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa molestiae itaque, enim qui non sit reiciendis commodi impedit adipisci magni dolorum assumenda dolore in! Perspiciatis temporibus nam sequi velit nisi corporis veniam eligendi, inventore ratione facilis voluptatibus quibusdam neque error exercitationem reiciendis sapiente aliquam officia minima qui, libero reprehenderit doloribus!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ut impedit nisi deserunt alias labore voluptas aliquam. Aspernatur qui sapiente quo laudantium, nisi iste molestiae unde officiis sunt perspiciatis, mollitia voluptatum, doloribus dolor? Aut provident ipsam suscipit sunt quis, maiores officiis ipsa commodi facilis amet blanditiis nihil.</div>
+    <div class="right" style="line-height:100px">
+        <div class="artical" id="About us">
+         <div class="text1"><h3>Project-1</h3></div>
+             <img src="p8.png" alt=""/>
+        </div>
+        <div class="artical">
+         <div class="text1"><h3>Project-2</h3></div>
+             <img src="p11.png" alt=""/>
+         </div>
+        <div class="artical">
+         <div class="text1"><h3>Project-3</h3></div>
+             <img src="p10.jpg" alt=""/>
+         </div>
+    </div>
+</div>
+
+<h1 style="color:black;font-size: 40px; text-align:left;padding:60px 100px">Technologies Used</h1>
+    <div class="box" id="box1">
+    <div class="image-heading">
+        <img src="./html.png" alt=""/>
+    </div>
+    
+<h2 style="font-size: 25px;">Introduction to HTML</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, magni.  orem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, vitae.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti quaerat tempora maxime aut magnam dicta quia eum. Quos vero s Eius tempora qui consectetur et, 
+</p>
+<div class="image" style="text-align: center;">
+<a href="./Page1.html" class="mybutton"> Read More
+</a>
+</div>
+</div>
+<div class="box" id="box2">
+<div class="image-heading">
+    <img src="css.png" alt=""/>
+</div>
+<h2 style="font-size: 25px;">Introduction to CSS</h2>
+<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, minus?  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, corporis!    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto cumque alias totam sit voluptatibus expedita animi? Eius tempora qui consectetur et, 
+</p>
+<div class="image" style="text-align: center;">
+    <a href="./Page2.html" class="mybutton"> Read More
+    </a>
+</div>
+</div>
+<div class="box" id="box3">
+<div class="image-heading">
+    <img src="./jquery.png" alt=""/>
+</div>
+<h2 style="font-size: 25px;">Introduction to JavaScript</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus, veniam!  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, nulla!   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto cumque alias totam sit voluptatibus expedita animi? Eius tempora qui consectetur et, 
+</p>
+<div class="image" style="text-align: center;">
+    <a href="./Page3.html" class="mybutton"> Read More
+    </a>
+</div>
+</div>
+<div class="box" id="box4">
+<div class="image-heading">
+    <img src="./bootstrap.jpg" alt=""/>
+</div>
+<h2 style="font-size: 25px;">Introduction to Bootstrap</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, aliquid!   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, animi?   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto cumque alias totam sit voluptatibus expedita animi? Eius tempora qui consectetur et, 
+</p>
+<div class="image" style="text-align: center;">
+    <a href="./Page4.html" class="mybutton"> Read More
+    </a>
+</div>
+</div>
+</div>
+
+</div>
+<h1 style="color:black;font-size: 38px; text-align:center;">Contact</h1>
+    <div class="footer" id= "Contact">
+        <ol>
+            <li><h4>Websites Templates for Practical-8 &copy;<a href="#">Beta-labs</h4></a></li>
+            <li><a href="#"><h4>Back to top</h4></a></li>
+        </ol>
+    </div>
+</body>
+</html>
+
