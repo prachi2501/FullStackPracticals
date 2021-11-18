@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Navigation bar with drop down menu</title>
+    <style>
+        *{
+            padding: 0;margin: 0;font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            
+            background-image: url("p17.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .banner{
+            height: 100vh;
+            padding: 0 350px;
+        }
+        .navbar{
+            padding: 10px,0px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo{
+            width: 100px;
+            cursor: pointer;
+        }
+        .navbar ul li{
+            list-style: none;
+            display: inline-block;
+            margin: 20px 5px;
+            position: relative;
+        }
+        .navbar ul li a{
+            font-size: 12px;
+            text-decoration: none;
+            color: white;  
+            margin: 2px;
+        }
+        .navbar ul li::after{
+            content:'';
+            height: 3px;
+            width: 0;
+            background: #009688;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.3s;
+        }
+        .content{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+        }
+        .content h1{
+             font-size: 70px;
+             text-align: left;
+        }
+        .content p{
+            text-align: left;
+            font-weight: 100;
+            line-height: 25px;
+        }
+        button{
+            width :90px;
+            padding: 8px 0;
+            text-align: center;
+            font-weight: bold;
+            border:2px solid black;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            position:absolute;
+            overflow: hidden;
+        }
+        span{
+            background: yellow;
+            height: 100%;
+            width: 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 00.3s;
+        }
+        button:hover span{
+            width: 100%;
+        }
+        .navbar select{
+            border: none;
+            background-color: transparent;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="p18.png" class="logo">
+            <ul>
+                    <li><a >
+                    <select name= "demo" id="demo">
+                        <option value="blog">BLOG</option>
+                        <option value="v1">V1</option>
+                        <option value="v2">v2</option>
+                    </select></a></li>
+                    <li><a href="#">COURSES<i class="fa fa-caret-down"></i></a></li>
+                    <li><a href="#">FEATURES<i class="fa fa-caret-down"></i></a></li>
+                    <li><a href="#">EVENTS</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <p>THE BEST THEME FOR</p>
+            <h1>EDUCATION</h1>
+            <div>
+                <button type="button"><span></span>BUY NOW</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
