@@ -1,0 +1,24 @@
+delete node from last
+
+
+ public ListNode deleteFirst(){
+        if(head==null){return null;}
+        ListNode temp -head;
+        head =head.next;
+        temp.next=null;
+        return temp;
+    }
+
+    public static void main(String[] args) {
+        Main sll =new Main();
+sll.insertt(11);
+sll.insertt(8);
+sll.insertt(1);
+sll.insertt(10);
+sll.display();
+System.out.println(sll.deleteFirst().data);
+System.out.println(sll.deleteFirst().data);
+sll.display();
+    }
+}
+ 

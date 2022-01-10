@@ -1,0 +1,13 @@
+class Solution {
+    public boolean canConstruct(String ransomNote, String magazine) {
+        int[]cs=new int[26];
+        for(char c:magazine.toCharArray()){
+            cs[c-ä]++;
+        }
+        for(char c:ransomNote.toCharArray()){
+            if(--cs[c-ä]<0)
+                return false;
+        }
+    return true;
+}         
+}
