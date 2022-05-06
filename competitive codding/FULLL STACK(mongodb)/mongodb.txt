@@ -1,0 +1,15 @@
+Insert Method:-
+
+db.collectionname.insert{ vallue1;"value2" }
+insert and insertmany differences
+1.syntax
+2.square bracket is also there in insertmany
+3.in the output insert-inserted
+in insertmany-acknowledge
+
+Save:-
+if we dont pass the primary key its show inserted
+if your primary key not going to match its show  absurted
+
+Update Method:-
+db.collectionname.update

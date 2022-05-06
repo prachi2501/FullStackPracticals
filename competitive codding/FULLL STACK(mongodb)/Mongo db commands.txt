@@ -1,0 +1,3 @@
+-->db.createCollection("Prachi")-----it is used to create a collection in mongodb
+
+--->to show the collection we write --------show collections

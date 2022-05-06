@@ -1,0 +1,27 @@
+0-255 -Grey scale [black & white]
+0-black 
+255-white
+highest pixel=16 pixels
+
+1).TIFF-Tagged image file format--U
+
+2).GIFF-Graphic image file format--U
+
+3).BMP-bitmap--U
+
+4).JPEG-joint photgraphic expert group--C=Lossy
+
+5).png-portable network graphics--C=Lossy
+
+1)image acquisition
+2)image preprocessing
+3)image enhancements
+4)image segmentation
+5)image morphology 
+6)image restoration
+7)image colour processing
+8)image transformation
+
+3d-B,G,R colur image 
+it is in sequencial image
+cmy is called as sustracted colour

@@ -1,0 +1,28 @@
+4.Install Angular CLI()
+
+Execution of Angular App
+1.Load Static Dom
+2.Load Angular Framework
+3.Framework will look for the directive
+If directive is there then you will get the output.
+If directive is missing then print as it is.
+4.framework will start the bootstrap mechanism
+angular.bootstrap(elements/static dom,[ .. ])
+5.static is converted into dynamic.
+
+
+Expressions:-
+-{{10+20}}
+-{{'First'+' '+'...'}}
+-{{['a','b','c','d'][2]}}--->if i want only c in this string i can use their index which is 2
+-{{{name:'seckl',age:2022,course:'Btech'}.age}}
+-{{}}
+-DDL - Items - Name of Student
+A
+B
+C
+
+-DDL
+red 
+green
+textbox control.(now if i write red after point all the text will convert into red )

@@ -1,0 +1,36 @@
+                                                                                    INTRODUCTION TO NEURAL NETWORKS
+
+1.CNN(Convoluation neural network)
+2.ANN(Artificial neural network )
+3.RNN(Recurrent neural network)
+
+Technologies:
+1.Python
+2.Pytorch
+3.Parallel Computing
+4.Pycuda
+  
+Tools:
+1.GCL(goggle colab)
+2.Configuration
+
+Set up:
+open gcl-->go to options edit-->notebook settings--> hardware acclerator (we have to changed it into GPU) and the save.
+
+Topics to coverup:
+1.What is a tensor ?
+2.Coverting numpy to tensor and backward .
+3.Matrix Operations
+4.Random number generatations
+5.Trigonometric Operation(Sin ,Cos ,Tan ,Asine ,Hyperbolic tangent ,Sigmoid)
+
+Vectors Functions(Argmax, Argmin, Softmax):
+
+3D And 4D Arrays
+
+Object Dectection and Features Extration
+
+Transfer Learning(Alexned, Resned, Mobilened, Vggned)
+
+
+

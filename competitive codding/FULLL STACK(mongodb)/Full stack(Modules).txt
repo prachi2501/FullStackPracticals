@@ -1,0 +1,14 @@
+Modules:-
+FB:-
+Friend Request Module
+Message
+User Module
+
+collection of:-
+Directives
+Contoller
+Services
+Filters
+Bindings
+configuration
+...
